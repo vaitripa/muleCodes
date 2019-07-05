@@ -10,5 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
     <flow name="test-mavenFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/adv" doc:name="HTTP"/>
         <set-payload value="&quot;hello&quot;" doc:name="Set Payload"/>
+        <logger message="#[payload]" level="INFO" doc:name="Logger"/>
     </flow>
 </mule>
